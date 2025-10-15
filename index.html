@@ -321,28 +321,12 @@
 
         fetch(scriptURL, {
           method: "POST",
+          mode: "no-cors",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(data),
-        })
-          .then((response) => response.json())
-          .then((res) => {
-            if (res.status === "ok") {
-              alert("Recebemos seus dados! Entraremos em contato em breve.");
-              form.reset();
-              modal.style.opacity = 0;
-              modal.style.visibility = "hidden";
-              form.style.transform = "translateY(-30px)";
-            } else {
-              alert("Ocorreu um erro. Tente novamente.");
-              console.error(res);
-            }
-          })
-          .catch((err) => {
-            alert("Erro de conexão. Tente novamente.");
-            console.error(err);
-          });
+          body: JSON.stringify({ nome: "Teste", email: "teste@teste.com" })
       });
     </script>
   </body>
 </html>
+
 
