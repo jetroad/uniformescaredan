@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Peça seu Orçamento | Uniformes Profissionais</title>
+    <meta
+      name="description"
+      content="Uniformes profissionais sob medida. Qualidade, conforto e estilo para sua equipe. Peça seu orçamento grátis agora!"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background: #f5f6f7;
+        color: #333;
+        line-height: 1.6;
+      }
+
+      header {
+        background: linear-gradient(
+            rgba(44, 62, 80, 0.85),
+            rgba(44, 62, 80, 0.85)
+          ),
+          url("https://images.unsplash.com/photo-1606813909355-df1c368b54b8?auto=format&fit=crop&w=1200&q=80");
+        background-size: cover;
+        background-position: center;
+        color: #fff;
+        text-align: center;
+        padding: 100px 20px 80px 20px;
+      }
+
+      header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+        letter-spacing: 1px;
+        font-weight: 700;
+      }
+
+      header p {
+        font-size: 1.2rem;
+        opacity: 0.95;
+        margin-bottom: 20px;
+      }
+
+      .btn-cta {
+        display: inline-block;
+        background: #f1c40f;
+        color: #2c3e50;
+        padding: 14px 30px;
+        border-radius: 8px;
+        font-weight: bold;
+        font-size: 1rem;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .btn-cta:hover {
+        background: #d4ac0d;
+      }
+
+      section {
+        max-width: 760px;
+        background: #fff;
+        margin: 50px auto;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .intro {
+        text-align: center;
+        margin-bottom: 25px;
+      }
+
+      .intro h2 {
+        color: #2c3e50;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+      }
+
+      .intro p {
+        color: #666;
+        font-size: 1rem;
+      }
+
+      iframe {
+        width: 100%;
+        height: 600px;
+        border: none;
+        border-radius: 8px;
+      }
+
+      .trust {
+        background: #ecf0f1;
+        padding: 40px 20px;
+        text-align: center;
+      }
+
+      .trust h3 {
+        font-size: 1.4rem;
+        color: #2c3e50;
+        margin-bottom: 10px;
+      }
+
+      .trust p {
+        color: #555;
+        font-size: 1rem;
+      }
+
+      footer {
+        background: #2c3e50;
+        color: #bbb;
+        text-align: center;
+        padding: 25px;
+        font-size: 14px;
+        margin-top: 50px;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+        font-weight: 500;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          padding: 70px 15px;
+        }
+        header h1 {
+          font-size: 1.8rem;
+        }
+        .btn-cta {
+          padding: 12px 20px;
+          font-size: 0.95rem;
+        }
+        section {
+          margin: 30px 15px;
+          padding: 20px;
+        }
+        iframe {
+          height: 550px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Uniformes Profissionais Sob Medida</h1>
+      <p>Conforto, qualidade e estilo para sua equipe — direto da fábrica.</p>
+      <a href="#formulario" class="btn-cta">Peça seu orçamento agora</a>
+    </header>
+
+    <section id="formulario">
+      <div class="intro">
+        <h2>Solicite seu orçamento gratuito</h2>
+        <p>
+          Preencha o formulário abaixo e nossa equipe entrará em contato com uma
+          proposta personalizada para sua empresa.
+        </p>
+      </div>
+
+      <!-- Cole o iframe do seu Google Forms aqui -->
+      <iframe
+        src="https://docs.google.com/forms/d/e/SEU_FORM_ID/viewform?embedded=true"
+        frameborder="0"
+        marginheight="0"
+        marginwidth="0"
+        >Carregando…</iframe
+      >
+    </section>
+
+    <div class="trust">
+      <h3>Mais de 200 empresas atendidas em todo o Brasil</h3>
+      <p>
+        Atendimento humanizado, entrega garantida e uniformes que representam o
+        profissionalismo da sua marca.
+      </p>
+    </div>
+    <footer>
+      © 2025 - <a href="#">Uniformes</a> | Todos os direitos reservados.
+    </footer>
+
+    <!-- Modal animado de captura de lead -->
+    <div
+      id="leadModal"
+      style="
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.5s;
+      "
+    >
+      <form
+        id="leadModalForm"
+        style="
+          background: #fff;
+          padding: 25px;
+          border-radius: 12px;
+          max-width: 400px;
+          width: 90%;
+          text-align: center;
+          transform: translateY(-30px);
+          transition: transform 0.5s;
+        "
+      >
+        <h3>Receba seu orçamento</h3>
+        <p>Deixe seus dados e nossa equipe entra em contato rapidamente.</p>
+
+        <input
+          type="text"
+          name="nome"
+          placeholder="Nome (opcional)"
+          style="
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+          "
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="E-mail"
+          required
+          style="
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+          "
+        />
+        <input
+          type="tel"
+          name="telefone"
+          placeholder="WhatsApp / Telefone"
+          required
+          style="
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+          "
+        />
+
+        <button
+          type="submit"
+          style="
+            padding: 12px 20px;
+            background: #f1c40f;
+            border: none;
+            border-radius: 8px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+          "
+        >
+          Enviar
+        </button>
+
+        <p style="font-size: 12px; color: #666; margin-top: 8px">
+          Ao enviar, você concorda em receber mensagens da nossa equipe.
+        </p>
+      </form>
+    </div>
+
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbziBg-5om-sCOzo_gim8bODfUaVJP3iHdUJ7cI9Tz6sFhnMRt3_BQivI12tT-F9WaKjSQ/exec"; // substitua pela URL do seu Apps Script
+      const modal = document.getElementById("leadModal");
+      const form = document.getElementById("leadModalForm");
+
+      // Função para abrir o modal com animação
+      function abrirModal() {
+        modal.style.visibility = "visible";
+        modal.style.opacity = 1;
+        form.style.transform = "translateY(0)";
+      }
+
+      // Abrir modal automaticamente após 3 segundos
+      setTimeout(abrirModal, 1000);
+
+      // Fechar modal ao clicar fora do formulário
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+          modal.style.opacity = 0;
+          modal.style.visibility = "hidden";
+          form.style.transform = "translateY(-30px)";
+        }
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const data = {
+          nome: form.nome.value.trim(),
+          email: form.email.value.trim(),
+          telefone: form.telefone.value.trim(),
+        };
+
+        if (!data.email || !data.telefone) {
+          alert("Por favor, preencha e-mail e telefone.");
+          return;
+        }
+
+        fetch(scriptURL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        })
+          .then((response) => response.json())
+          .then((res) => {
+            if (res.status === "ok") {
+              alert("Recebemos seus dados! Entraremos em contato em breve.");
+              form.reset();
+              modal.style.opacity = 0;
+              modal.style.visibility = "hidden";
+              form.style.transform = "translateY(-30px)";
+            } else {
+              alert("Ocorreu um erro. Tente novamente.");
+              console.error(res);
+            }
+          })
+          .catch((err) => {
+            alert("Erro de conexão. Tente novamente.");
+            console.error(err);
+          });
+      });
+    </script>
+  </body>
+</html>
